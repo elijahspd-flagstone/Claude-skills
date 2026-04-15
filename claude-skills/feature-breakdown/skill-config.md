@@ -12,7 +12,8 @@ base_dir:          /Users/elijah.sopade/claudecode/claude/prd-maker
 logo_path:         /Users/elijah.sopade/claudecode/claude/prd-maker/flagstone_logo.png
 brand_voice:       Clear, warm, and direct. Never corporate. Never vague. Write like a smart teammate who respects the reader's time. Use plain language — if a solopreneur can't understand it, rewrite it.
 personas:
-  builder:         Builder — creates sites/apps with the product
-  visitor:         Visitor — end user of the built product
-  admin:           Admin — internal staff or power user
+  engineer:         Engineer — develops product features
+  adviser:          Adviser - end user of the built product features
+  sales:            Sales — internal staff who has ongoing relationship with adviser
+  customerservice:  CustomerService - internal staff who answer adviser and client queries
 analytics_convention: noun_past_tense_verb in snake_case (e.g. site_published, domain_attached)
