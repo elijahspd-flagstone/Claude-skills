@@ -41,13 +41,13 @@ def _load_config() -> dict:
 
 _cfg = _load_config()
 
-COMPANY_NAME = _cfg.get("company_name", "Codepup")
+COMPANY_NAME = _cfg.get("company_name", "Flagstone")
 
 _logo_str = _cfg.get("logo_path", "")
 if _logo_str:
     LOGO_PATH = Path(_logo_str)
 else:
-    LOGO_PATH = Path(__file__).parent / "assets" / "codepup_logo.png"
+    LOGO_PATH = Path(__file__).parent / "assets" / "flagstone_logo.png"
 
 WATERMARK_OPACITY = 0.02   # 2% — barely there
 
@@ -106,7 +106,7 @@ def _render_mermaid(mmd_content: str, out_path: Path) -> bool:
     """
     import subprocess, tempfile, json
     from brand_colors import (
-        NAVY, GOLD, ICE_BLUE, OFF_WHITE, SLATE, GRAY, WARM_TAN,
+        DEEP_BLUE, MIDTONE, ICE_BLUE, OFF_WHITE, SLATE, GRAY, WARM_TAN,
     )
     try:
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -115,16 +115,16 @@ def _render_mermaid(mmd_content: str, out_path: Path) -> bool:
         mermaid_config = {
             "theme": "base",
             "themeVariables": {
-                "primaryColor":        OFF_WHITE,
-                "primaryTextColor":    NAVY,
-                "primaryBorderColor":  NAVY,
+                "primaryColor":        DEEP_BLUE,
+                "primaryTextColor":    #000000,
+                "primaryBorderColor":  MIDTONE,
                 "lineColor":           SLATE,
                 "secondaryColor":      ICE_BLUE,
                 "tertiaryColor":       OFF_WHITE,
                 "edgeLabelBackground": "#FFFFFF",
                 "clusterBkg":          ICE_BLUE,
                 "titleColor":          NAVY,
-                "fontFamily":          "Helvetica, Arial, sans-serif",
+                "fontFamily":          "Arial, sans-serif",
                 "fontSize":            "15px",
             },
         }
